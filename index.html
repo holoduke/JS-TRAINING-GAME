@@ -1,0 +1,37 @@
+
+<script  type="text/javascript" src="lib/Game.js"></script>
+<script  type="text/javascript" src="lib/Player.js"></script>
+<script  type="text/javascript" src="lib/Render.js"></script>
+<script  type="text/javascript" src="lib/Map.js"></script>
+
+<body>
+
+
+<script>
+
+
+main = function(){
+	
+	init = function()
+	{
+		console.log('init');
+		
+		var p1 = new Player();
+		var p2 = new Player();
+		var map = new Map();
+		var render = new CssRender();
+		
+		game = new Game(p1,p2,map,render);
+		game.render = new CssRender();
+		game.run();
+	}
+	
+	init();
+}
+
+main();
+
+</script>
+
+
+</body>
